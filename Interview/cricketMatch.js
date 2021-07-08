@@ -33,7 +33,7 @@ function scoring(runs){
     }
     
     
-    if(oddRuns){
+    if(oddRuns || lastBall ){
       if(onStrike == 'player1'){
            onStrike = 'player2'
 
@@ -43,15 +43,7 @@ function scoring(runs){
       }
     } 
     
-    if(lastBall ) {
-      if(onStrike == 'player1'){
-           onStrike = 'player2'
-
-      }else{
-            onStrike = 'player1'
-
-      }
-    }
+   
     
   }    
     
