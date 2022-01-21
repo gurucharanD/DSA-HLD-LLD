@@ -26,3 +26,5 @@ function arrayOfProducts(array) {
 
 // Do not edit the line below.
 exports.arrayOfProducts = arrayOfProducts;
+
+console.log('hello')
