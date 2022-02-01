@@ -1,5 +1,9 @@
 /**
   returns array
+  since the array is sorted and can contain negative values, 
+  the largest element in the sorted squares array comes from either the first element of last element
+  comapre the first and last elements of array and find the biggest element among them
+  and fill the array in reverse order from end to start
  */
 function sortedSquaredArray(array) {
     // Write your code here.
@@ -47,3 +51,36 @@ exports.sortedSquaredArray = sortedSquaredArray;
 
 //   // Do not edit the line below.
 //   exports.sortedSquaredArray = sortedSquaredArray;
+
+
+// def sortedSquaredArray(array):
+//     # Write your code here.
+// 	print(array)
+// 	startIndex = 0
+// 	endIndex = len(array)-1
+// 	indexToInsert = len(array)-1
+// 	sortedArray=[0 for _ in array]
+	
+// 	while startIndex <= endIndex:
+// 		elem1 = abs(array[startIndex])
+// 		elem2 = abs(array[endIndex])
+// 		elemToInsert=''
+		
+// 		if elem1 >= elem2:
+// 			elemToInsert = elem1
+// 			startIndex+=1
+// 		else:
+// 			elemToInsert = elem2
+// 			endIndex-=1
+			
+// 		sortedArray[indexToInsert]=elemToInsert*elemToInsert
+// 		print(elemToInsert,indexToInsert,sortedArray)
+
+// 		indexToInsert-=1
+
+		
+// 	print(sortedArray)
+			
+	
+//     return sortedArray
+
