@@ -96,3 +96,37 @@ function tournamentWinner(competitions, results) {
 
 // Do not edit the line below.
 exports.tournamentWinner = tournamentWinner;
+
+____________PYTHON implemantaion_______________
+// def tournamentWinner(competitions, results):
+	
+// 	scores = {}
+// 	for index in range(len(competitions)):
+// 		homeTeam = competitions[index][0]
+// 		awayTeam = competitions[index][1]
+		
+// 		result = results[index]
+// 		# print(homeTeam,awayTeam,result)
+		
+// 		if result == 1:
+// 			if homeTeam in scores:
+// 				scores[homeTeam]+=3
+// 			else:
+// 				scores[homeTeam]=3
+// 		else:
+// 			if awayTeam in scores:
+// 				scores[awayTeam]+=3
+// 			else:
+// 				scores[awayTeam]=3
+				
+// 	winningScore = 0
+// 	winner = ''
+// 	for player in scores:
+// 		if scores[player] > winningScore:
+// 			winningScore = scores[player]
+// 			winner = player
+		
+// 	print(scores)
+		
+//     return winner
+
