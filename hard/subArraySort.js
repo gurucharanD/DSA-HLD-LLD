@@ -97,5 +97,5 @@ exports.subarraySort = subarraySort;
  * array[i]>= max element of unsorted array decrement right index
  * 
  * the final values of left and right indxes will be indexes at which the minimum unsorted array begins
- * 
+ * `
  */
