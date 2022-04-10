@@ -1,4 +1,4 @@
-//O(nlogn)
+//O(n)
 
 function minHeightBst(array) {
     // Write your code here.
