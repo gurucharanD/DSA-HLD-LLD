@@ -23,7 +23,8 @@ function getTreeInfo(tree){
 	const rightTreeInfo = getTreeInfo(tree.right)
 	
 	const longestPathThroughRoot = leftTreeInfo.height + rightTreeInfo.height
-	const maxDiameterSoFar = Math.max(leftTreeInfo.diameter,rightTreeInfo.diameter)
+	const maxDiameterSoFar = Math.max(leftTreeInfo.diameter, rightTreeInfo.diameter)
+	
 	const currentDiameter = Math.max(longestPathThroughRoot,maxDiameterSoFar)
 	
 	const currentHeight = 1+Math.max(leftTreeInfo.height,rightTreeInfo.height)
