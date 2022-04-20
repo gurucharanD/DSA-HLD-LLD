@@ -89,7 +89,7 @@ def getUnvisted(i,j,matrix,visited):
     # above node
 	if i > 0 and not visited[i-1][j]:
 		unvisitedNeighbours.append([ i-1, j ])
-    # right node
+    # below node
 	if i < len(matrix)-1 and not visited[i+1][j]:
 		unvisitedNeighbours.append([ i+1, j ])
     # left node
