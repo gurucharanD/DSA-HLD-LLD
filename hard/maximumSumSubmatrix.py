@@ -7,8 +7,7 @@
 # you will need 9 addition operations to find the sum which 3 ^ 2
 # space is constant O(1)
 
-def maximumSumSubmatrix(matrix, size):
-	
+def maximumSumSubmatrix(matrix, size):	
 	maxSum = float("-inf")
     for i in range(len(matrix) - size + 1):
         for j in range(len(matrix[0]) - size + 1):
