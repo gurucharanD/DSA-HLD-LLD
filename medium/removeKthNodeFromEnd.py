@@ -1,4 +1,9 @@
 # This is an input class. Do not edit.
+# place 2 pointers p1 and p2 at the head of LL
+# move p2 by k steps first
+# then move both pointers p1 and p2 together unitl one of them reaches end
+# when one of them reaches the end
+# the node pointed by p1 is the node to be removed
 class LinkedList:
     def __init__(self, value):
         self.value = value
