@@ -28,6 +28,12 @@
 # O(n) time
 
 # This is an input class. Do not edit.
+
+# the longest diameter may be passing through the root and may also pass through the children
+# that is why we find the max diameter passing through root 
+# and max diamater among children
+# and the max of these two becomes the max diameter thus far
+
 class BinaryTree:
     def __init__(self, value, left=None, right=None):
         self.value = value
