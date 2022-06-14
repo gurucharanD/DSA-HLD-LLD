@@ -9,7 +9,7 @@ function levenshteinDistance(str1, str2) {
 		row[0]=i;
 		edits.push(row)
 	}
-	
+	console.log(edits)
 	for(let i = 1; i<str2.length+1; i++){
 		for(let j= 1; j<str1.length+1; j++){
 			if(str2[i-1] === str1[j-1]){
@@ -25,6 +25,8 @@ function levenshteinDistance(str1, str2) {
 }
 
 // Do not edit the line below.
-console.log(levenshteinDistance('lovely', 'waver'))
+// console.log(levenshteinDistance('lovely', 'waver'))
 
-console.log(levenshteinDistance('waver', 'lovely'))
+// console.log(levenshteinDistance('waver', 'lovely'))
+
+console.log(levenshteinDistance('a', 'b'))
