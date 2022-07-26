@@ -1,6 +1,3 @@
-from signal import pthread_kill
-from pandas import array
-
 
 def longestPeak(array):
     # Write your code here.

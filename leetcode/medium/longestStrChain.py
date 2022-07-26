@@ -6,6 +6,7 @@
 # character is already in the dictionary, 
 # no of successors[i] is 1 + no of successors of the newly formed word
 
+# similar to LIS
 class Solution:
     def longestStrChain(self, words: List[str]) -> int:
         
