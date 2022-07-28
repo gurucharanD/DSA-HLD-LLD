@@ -26,6 +26,17 @@ class Solution:
                 return
                 
             for i in range(index,len(candidates)):
+
+                # irrespective of if the element at index is a duplicate or not 
+                # we can pick the element at the index, after picking the first 
+                # element you cannot pick the duplicate element
+
+                # the duplicate elements lie to the right side of the current index
+                # so if you should always include the current index, if you 
+                # are picking the current index for the first time and then check 
+                # if you are including any duplicates hence we add the condition
+                #  i > index 
+
                 if i > index and candidates[i] == candidates[i-1]:
                     continue
                     
