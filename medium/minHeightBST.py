@@ -1,7 +1,3 @@
-from tkinter.tix import Tree
-from xml.dom.minidom import Element
-
-
 def minHeightBst(array):
 	return constructBST(array,None,0,len(array)-1)
 
