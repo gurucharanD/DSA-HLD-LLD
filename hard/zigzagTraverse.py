@@ -1,6 +1,6 @@
-when you are at row 0 and moving upwards, then you change direction to right
-when you are at last column, we cant go right then we go down 
-when you are at col 0 move down
+# when you are at row 0 and moving upwards, then you change direction to right
+# when you are at last column, we cant go right then we go down 
+# when you are at col 0 move down
 
 def zigzagTraverse(array):
     # Write your code here.

@@ -1,4 +1,14 @@
-# do binary search over the smaller array
+# do binary search based on the smaller array
+# place mid breaking both the arrays into two halfs
+# once you find a place where Aleft <= Bright and Bleft <= Aright
+# find median depending on the length of the arrays
+# if Aleft > Bright: this means you have an element that is supposed 
+# to be in the right part in the left part of the array, so 
+    # r = i-1
+# else:
+    # l = i+1
+
+
 
 class Solution(object):
     def findMedianSortedArrays(self, num1, num2):
