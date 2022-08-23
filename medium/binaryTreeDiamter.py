@@ -33,36 +33,33 @@
 # that is why we find the max diameter passing through root 
 # and max diamater among children
 # and the max of these two becomes the max diameter thus far
-
-class BinaryTree:
-    def __init__(self, value, left=None, right=None):
-        self.value = value
-        self.left = left
-        self.right = right
-
-class TreeInfo:
-	def __init__(self,height,diameter):
-		self.height = height
-		self.diameter = diameter
-
-def binaryTreeDiameter(tree):
-    return getTreeInfo(tree).diameter;
-
-def getTreeInfo(tree):
-	if tree is None:
-		return TreeInfo(0,0)
-	
-	leftTreeInfo = getTreeInfo(tree.left)
-	rightTreeInfo = getTreeInfo(tree.right)
-	
-	longestPathThroughRoot = leftTreeInfo.height + rightTreeInfo.height
-	
-	maxDiameterSoFar = max(leftTreeInfo.diameter,rightTreeInfo.diameter)
-	
-	currentDiameter = max(maxDiameterSoFar,longestPathThroughRoot)
-	currentHeight = 1+max(leftTreeInfo.height , rightTreeInfo.height)
-	
-	return TreeInfo(currentHeight,currentDiameter)
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def diameterOfBinaryTree(self, root: Optional[TreeNode]) -> int:
+        
+        
+        diameter = [0]
+        
+        def helper(root,diameter):
+            if root is None:
+                return 0
+            
+            lh = helper(root.left,diameter)
+            rh = helper(root.right,diameter)
+            
+            diameter[0] = max(diameter[0],lh+rh)
+            
+            return 1+max(lh,rh)
+        
+        helper(root,diameter)
+        return diameter[0]
+        
+        
 
 	
 	
