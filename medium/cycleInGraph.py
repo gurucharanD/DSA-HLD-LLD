@@ -2,6 +2,10 @@
 # when you are not sure about what to do 
 # in the case of a graphs problem
 # we just run the traversal algorithms
+# this is for directed graphs
+# if you are visiting a node, 
+# which is already visited and 
+# instack, then there is a cycle
 
 def cycleInGraph(edges):
 	

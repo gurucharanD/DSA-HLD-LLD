@@ -7,7 +7,7 @@
 
 
 # go to the rightmost node
-attach its left 
+# attach its left 
 class Solution:
     def flatten(self, root: Optional[TreeNode]) -> None:
         """
