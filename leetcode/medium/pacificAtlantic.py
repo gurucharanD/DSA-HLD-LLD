@@ -33,11 +33,15 @@ class Solution:
             
         
         for r in range(0,rows):
-            dfs(r,0,pac,heights[r][0])
+            # first col
+            dfs(r,0,pac,heights[r][0]) 
+            # last col
             dfs(r,cols-1,atl,heights[r][cols-1])
 
         for c in range(0,cols):
+            # first row
             dfs(0,c,pac,heights[0][c])
+            # last row
             dfs(rows-1,c,atl,heights[rows-1][c])
 
         for x,y in atl.intersection(pac):
