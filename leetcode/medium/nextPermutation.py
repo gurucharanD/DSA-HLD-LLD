@@ -1,5 +1,6 @@
 # start looping from backwards,
 # you will find an increasing sequence in the numbers
+
 # stop and note the index where the increasing sequence breaks
 # and make a note of this index call it index1
 

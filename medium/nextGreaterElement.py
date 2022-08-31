@@ -28,6 +28,7 @@ def nextGreaterElement(array):
 			outputArray[poppedIndex] = array[currentIndex]
 			
 		stack.append(currentIndex)
+		
     return outputArray
 
 
