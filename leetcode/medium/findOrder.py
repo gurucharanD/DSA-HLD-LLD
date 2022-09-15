@@ -9,7 +9,6 @@ class Solution:
         adjList = [ [] for _ in range(numCourses)]
         visited = [ False for _ in range(numCourses)]
         currentlyInStack = [False for _ in range(numCourses)]
-        cycle = False
         order = []
 
         for d,s in prerequisites:

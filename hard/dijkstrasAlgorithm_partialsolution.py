@@ -1,22 +1,24 @@
-def findDistance(source,target,edges):
-	if source == target:
-		return 0
-
-	minDistance = float("inf")
-	sourceEdges = edges[source]
-	for edge in sourceEdges:
-		if edge[0] == target:
-			minDistance = edge[1]
-		minDistance = min( minDistance, edge[1] + findDistance(edge[0],target,edges) )
-	return minDistance
+from heapq import heappop, heappush, heapify
 
 def dijkstrasAlgorithm(start, edges):
-	distances = []
-	print(edges)
-	for i in range(0,len(edges)):
-		distance = findDistance(start,i,edges)
-		if distance == float("inf"):
-			distance = -1
-		distances.append(distance)
+    n = len(edges)
+    pq = []
+    heapify(pq)
+    heappush(pq,(0,(start,0)))
+    distance = [float("inf") for _ in range(n)]
+    distance[start] = 0
 
-	return distances
+    while len(pq):
+
+        currNode,distanceTraveled = heappop(pq)[1]
+        for nei,wei in edges[currNode]:
+
+            if distance[nei] > distanceTraveled+wei:
+                distance[nei] = distanceTraveled+wei
+                heappush(pq,(distanceTraveled+wei,(nei,distanceTraveled+wei)))
+
+    for i in range(0,len(distance)):
+        distance[i] = -1 if distance[i] == float("inf") else distance[i]
+    return distance
+        
+    
