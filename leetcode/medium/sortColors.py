@@ -25,7 +25,7 @@ class Solution(object):
                 arr[high],arr[mid] = arr[mid],arr[high]
                 high-=1
                 # in this case we dont move the mid pointer because 
-                # if you are swapping a zero at last pointer 
+                # if you are swapping a zero located at last pointer 
                 # to 2 at mid pointer
                 # the 0 should be swapped with low pointer
                 # to keep a check on the swapped value
