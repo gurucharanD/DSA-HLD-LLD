@@ -1,7 +1,11 @@
 # do binary search based on the smaller array
+# because if we may go out of indexes in smaller array
+# for any pointer that is calculated based on the bigger array
+
 # place mid breaking both the arrays into two halfs
 # once you find a place where Aleft <= Bright and Bleft <= Aright
 # find median depending on the length of the arrays
+
 # if Aleft > Bright: this means you have an element that is supposed 
 # to be in the right part in the left part of the array, so 
     # r = i-1
@@ -36,8 +40,10 @@ class Solution(object):
             Bright = B[j+1] if(j+1) < len(B) else float("inf")
             
             if Aleft <= Bright and Bleft <= Aright:
+                # odd length array
                 if total % 2:
                     return min(Aright,Bright)
+                # even length array
                 return (max(Aleft,Bleft)+min(Aright,Bright))/2.
             elif Aleft > Bright:
                 r = i-1

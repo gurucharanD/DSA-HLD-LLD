@@ -1,11 +1,14 @@
 # 5. Longest Palindromic Substring
 
-
 # assume that the first character in the given string is our longest palindrome
-# starting from index 1, 
+# starting from index 1 at every index
 # we need to find the even length palindrome which is string[i-1] to sting[i]
 # and we also need to find the odd length palindrome which is string[i-1] to string[i+1]
+
 # then we identify the longest palindrome amongst these
+# by expanding outwards i.e decrement left until its greater than 0
+# increment right until right is less than the length of the string
+# and at every step verify if character at left and right pointers are same
 # at the end we return the max palindrome
 
 def longestPalindromicSubstring(string):

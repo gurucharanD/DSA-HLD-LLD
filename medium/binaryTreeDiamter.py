@@ -45,6 +45,9 @@ class Solution:
         
         diameter = [0]
         
+        # function returns the longest path 
+        # passing through the node or through its children
+
         def helper(root,diameter):
             if root is None:
                 return 0
@@ -52,6 +55,9 @@ class Solution:
             lh = helper(root.left,diameter)
             rh = helper(root.right,diameter)
             
+            # check if the current left and right heights sum
+            # forms the longest binary tree diameter
+
             diameter[0] = max(diameter[0],lh+rh)
             
             return 1+max(lh,rh)

@@ -1,4 +1,4 @@
-# This is an input class. Do not edit.
+p# This is an input class. Do not edit.
 from opcode import HAVE_ARGUMENT
 from platform import node
 from time import thread_time
