@@ -1,3 +1,5 @@
+# 210. Course Schedule II
+
 class Solution:
     def findOrder(self, numCourses: int, prerequisites: List[List[int]]) -> List[int]:
         
@@ -27,7 +29,8 @@ class Solution:
                 elif currentlyInStack[neighbour]:
                     return True
                     
-            # topological sort
+            # topological sort - append the node to the stack 
+            # after all the adjacent nodes to the node have been visited
             order.append(node)
             currentlyInStack[node] = False
             return False
