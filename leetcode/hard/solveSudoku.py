@@ -5,6 +5,7 @@
 # and try to change its value
 # 37. Sudoku Solver
 
+
 class Solution:
     def solveSudoku(self, board: List[List[str]]) -> None:
 
@@ -41,22 +42,3 @@ class Solution:
 
         return helper(board)
         
-	rowIsValid = value not in board[row]
-	colIsValid = value not in map(lambda r: r[col],board)
-	
-	if not rowIsValid or not colIsValid:
-		return False
-	
-	subgridRowStart = row//3
-	subgridColStart = col//3
-	
-	for rowIdx in range(3):
-		for colIdx in range(3):
-			rowToCheck = subgridRowStart*3 + rowIdx
-			colToCheck = subgridColStart*3 + colIdx
-			existingValue = board[rowToCheck][colToCheck]
-			
-			if existingValue == value:
-				return False
-			
-	return True

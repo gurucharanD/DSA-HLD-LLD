@@ -65,7 +65,9 @@ class Solution:
         helper(root,diameter)
         return diameter[0]
         
-        
+# diameter running through the root is the
+# sum of its left height and right height
+# height of node is 1+max(lh+rh)
 
 	
 	

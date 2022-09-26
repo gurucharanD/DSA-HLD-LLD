@@ -19,7 +19,7 @@ class Solution:
             p2 = find(b)
             
             if p1 == p2:
-                return 0
+                return 0    
             
             if rank[p2] > rank[p1]:
                 parent[p1] = p2
