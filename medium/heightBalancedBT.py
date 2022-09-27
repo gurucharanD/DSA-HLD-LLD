@@ -4,35 +4,33 @@
 # subtrees and check if the difference between them is less than or equal to 1
 
 
-class BinaryTree:
-    def __init__(self, value, left=None, right=None):
-        self.value = value
-        self.left = left
-        self.right = right
-		
-class TreeInfo:
-	def __init__(self,isValid,height):
-		self.isValid = isValid
-		self.height = height
-
-
-def heightBalancedBinaryTree(tree):
-	treeInfo = getTreeInfo(tree)
-	return treeInfo.isValid;
-	
-def getTreeInfo(tree):
-	
-	if tree is None:
-		return TreeInfo(True,0)
-	
-	leftTree = getTreeInfo(tree.left)
-	rightTree = getTreeInfo(tree.right)
-	
-	isValid = (leftTree.isValid and rightTree.isValid and abs(rightTree.height - leftTree.height) <= 1)
-	height = max(leftTree.height,rightTree.height) + 1
-	
-	return TreeInfo(isValid,height)
-	 
-
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def isBalanced(self, root: Optional[TreeNode]) -> bool:
+        
+        if root is None:
+            return True
+        
+        def isValid(node):
+            if node is None:
+                return 0
+            
+            left = isValid(node.left)
+            if left == -1:
+                return -1
+            right = isValid(node.right)
+            if right == -1: 
+                return -1
+            
+            if abs(left-right) > 1 : return -1
+            
+            return 1+max(left,right)
+        
+        return isValid(root) != -1
 
 

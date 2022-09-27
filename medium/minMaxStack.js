@@ -26,17 +26,6 @@ class MinMaxStack {
 	}
 
 	push(number) {
-		// Write your code here.
-		// 		if(number < this.min || this.min ==null){
-		// 			this.min = number
-		// 		}
-
-		// 		if(number > this.max || this.max ==null){
-		// 			this.max = number
-		// 		}
-
-		// let latestMinMax = this.minMaxStack[this.minMaxStack.length-1]
-
 		if (this.minMaxStack.length) {
 
 			let latestMinMax = this.minMaxStack[this.minMaxStack.length - 1]
