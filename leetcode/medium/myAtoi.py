@@ -1,7 +1,6 @@
 class Solution:
     def myAtoi(self, ele: str) -> int:
         
-        
         ele = ele.strip()        
         if len(ele)==0:
             return 0
