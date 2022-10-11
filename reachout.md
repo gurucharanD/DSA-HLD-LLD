@@ -1,9 +1,10 @@
 Dear {}
 
-I am a recent Engineering graduate from CSU Long Beach, and I am looking for SDE internship opporunities during the spring 23.
+I am a recent Engineering graduate from CSU Long Beach, and I am looking for full time opporunities starting june 23.
 I would be delighted at the chance to put the skills I have learned to use with you.
 
 My technical skills:
+    programming languages: Java, Python, Javascript
     Web Application Development:    JavaScript (ES5, ES6 and above) | Angular (2 to latest version)
     Back-End Technologies: 			Node.js, Python, Go, GraphQL
     Database Technologies: 			MySQL and Elasticsearch
