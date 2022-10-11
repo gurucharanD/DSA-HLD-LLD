@@ -5,8 +5,8 @@ I would be delighted at the chance to put the skills I have learned to use with 
 
 My technical skills:
     programming languages: Java, Python, Javascript
-    Web Application Development:    JavaScript (ES5, ES6 and above) | Angular (2 to latest version)
-    Back-End Technologies: 			Node.js, Python, Go, GraphQL
+    Web Application Development:    JavaScript | Angular, React
+    Back-End Technologies: 			Node.js, Python, GraphQL
     Database Technologies: 			MySQL and Elasticsearch
     CI-CD Tools: 				Docker and Kubernetes
 
