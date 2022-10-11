@@ -12,7 +12,7 @@ abstract public class Subscriber {
 
 class User1 extends Subscriber {
     private int id;
-    private String msg;
+    // private String msg;
 
     User1(int id) {
         super();
@@ -21,13 +21,13 @@ class User1 extends Subscriber {
 
     public void update(String msg) {
         System.out.println(this.id + "  recieved new msg " + msg);
-        this.msg = msg;
+        // this.msg = msg;
     }
 }
 
 class User2 extends Subscriber {
     private int id;
-    private String msg;
+    // private String msg;
 
     User2(int id) {
         super();
@@ -36,13 +36,13 @@ class User2 extends Subscriber {
 
     public void update(String msg) {
         System.out.println(this.id + "  recieved new msg " + msg);
-        this.msg = msg;
+        // this.msg = msg;
     }
 }
 
 class User3 extends Subscriber {
     private int id;
-    private String msg;
+    // private String msg;
 
     User3(int id) {
         super();
@@ -51,6 +51,6 @@ class User3 extends Subscriber {
 
     public void update(String msg) {
         System.out.println(this.id + "  recieved new msg " + msg);
-        this.msg = msg;
+        // this.msg = msg;
     }
 }

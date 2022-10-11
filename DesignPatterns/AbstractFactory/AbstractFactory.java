@@ -1,7 +1,5 @@
 package DesignPatterns.AbstractFactory;
 
-import java.rmi.server.RemoteRef;
-
 public class AbstractFactory {
 
     public static Factory createFactory(String osType) {
