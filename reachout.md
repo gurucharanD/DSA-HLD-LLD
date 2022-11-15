@@ -1,6 +1,6 @@
-Dear {}
+Hello Katie
 
-I am a recent Engineering graduate from CSU Long Beach, and I am looking for full time opporunities starting june 23.
+I am Guru chara, CS grad student @ CSU Long Beach, and I am looking for full time opporunities starting june 23 and I'm very interested in the opportunities for new grad at Amazon.
 I would be delighted at the chance to put the skills I have learned to use with you.
 
 My technical skills:

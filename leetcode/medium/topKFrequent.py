@@ -1,29 +1,61 @@
-from heapq import heappop, heappush, heapify
+from heapq import heapify, heappush, heappop
+from collections import Counter
 
 class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+        
 #         bucket sort
-#         we take an array bcs if 2 numbers appear same number of times
-# we should be able to save both of them to the array      
-        buckets = [ [] for _ in range(0,len(nums)+1)]
-        counter = Counter(nums)
+#         buckets = [[] for _ in range(len(nums)+1)]
+#         counter = Counter(nums)
         
-        # [1,1,1,2,2,3]
-        # find the no of times each number appeared in nums
-        # [[], [3], [2], [1], [], [], []]
+#         for key in counter:
+#             buckets[counter[key]].append(key)
+            
+#         ans = []
+#         for bucket in reversed(buckets):
+#             for j in bucket:
+#                 ans.append(j)
+#                 if len(ans) == k:
+#                     return ans
 
-        for count in counter:
-            buckets[counter[count]].append(count)
+
+
+#       max heap
+        # counter = Counter(nums)
+        # max_heap = [(-counter[key],key) for key in counter]
+        # heapify(max_heap)
+        # ans = []
+        # for _ in range(k):
+        #     ans.append(heappop(max_heap)[1])
+        # return ans
+        
+# min heap
+        
+        counter = Counter(nums)
+        pairs = [(counter[key],key) for key in counter]
+        
+        min_pair = min(pairs,key = lambda x:x[0])
+        min_heap = [min_pair]
+        heapify(min_heap)
+        
+        for i in range(0,len(pairs)):
+            val,key = pairs[i]
             
-        index = len(nums)
+            if val >= min_heap[0][0]:
+                heappush(min_heap,(val,key))
+            
+            if len(min_heap) > k:
+                heappop(min_heap)
+                
         ans = []
-        
-        for i in range(len(buckets)-1,0,-1):
-            
-            for j in buckets[i]:
-                ans.append(j)
-                if len(ans) == k:
-                    return ans
+        for _ in range(k):
+            ans.append(heappop(min_heap)[1])
+        return ans
+
+
         
         
         
+        
+
+    
