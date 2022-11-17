@@ -1,4 +1,7 @@
 {
     "python.formatting.provider": "black",
-    "C_Cpp.errorSquiggles": "Disabled"
+    "C_Cpp.errorSquiggles": "Disabled",
+    "files.associations": {
+        "asgn_2.C": "cpp"
+    }
 }

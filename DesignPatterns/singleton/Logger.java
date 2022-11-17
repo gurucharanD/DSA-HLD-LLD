@@ -9,7 +9,7 @@ class Logger {
     static Logger getLoggerInstance() {
         if (loggerInstance == null) {
             // synchronized block
-            // to allow only thread to access
+            // to allow only one thread to access
             // the instance creation at any point of time
             synchronized (Logger.class) {
                 if (loggerInstance == null) {
