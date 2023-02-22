@@ -4,6 +4,13 @@
 #         self.val = val
 #         self.left = left
 #         self.right = right
+
+
+# similar intuition as diameter
+# find the diameter that has the maximum sum value
+# and at every node keep track
+# of the maximum sum value
+
 class Solution:
     def maxPathSum(self, root: Optional[TreeNode]) -> int:
         

@@ -1,5 +1,8 @@
 # 2385. Amount of Time for Binary Tree to Be Infected
 # burn binary tree
+# we need to use BFS because the fire goes from current node
+# to the child nodes at the same time
+
 
 class Solution:
     def amountOfTime(self, root: Optional[TreeNode], start: int) -> int:

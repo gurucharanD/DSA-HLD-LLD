@@ -1,6 +1,6 @@
-Hello Katie
+Hello 
 
-I am Guru chara, CS grad student @ CSU Long Beach, and I am looking for full time opporunities starting june 23 and I'm very interested in the opportunities for new grad at Amazon.
+I am Guru charan, CS grad student @ CSU Long Beach, and I am looking for full time opporunities starting june 23 and I'm very interested in the opportunities for new grad at Amazon.
 I would be delighted at the chance to put the skills I have learned to use with you.
 
 My technical skills:
@@ -19,3 +19,24 @@ Many thanks for your time and consideration.
 
 Yours sincerely,
 Guru charan
+
+-----------------------------------------------------------------
+Never say: "I'm looking to make $150,000-$170,000"
+
+Instead say: "I’m currently interviewing for positions that pay $150,000-$170,000”
+
+"Looking to make" can be interpreted as “I’m hoping to make $150,000 but I’m currently earning much less”
+
+"I'm currently interviewing" tells the interviewer that the MARKET is saying you’re worth $150,000-$170,000 and that you’re also in DEMAND from other companies.
+
+Practice this in front of the mirror if you decide to take the route of disclosing a range.
+
+_______________________________
+
+I'm a grad student in computer science at CSU Long Beach.I'm about to graduate this summer and currently looking out for new grad SWE/SDE roles.
+I posses close to 4 years of professional experience in full stack development.
+Looking forward to connecting with you for any potential roles.
+
+Thank you.
+
+__________________________________

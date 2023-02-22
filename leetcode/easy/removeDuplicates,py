@@ -1,0 +1,28 @@
+# the idea is to use left and right pointers
+# left pointer is pointing to the position
+# where the next unique element in the array
+# is going to be moved
+# right pointer keeps moving through the array
+# and when it finds an index where the 
+# value at index to its left is not equal 
+# to the value at the current index
+# then we switch the value at right pointer 
+# to the index pointed by left pointer 
+# 
+
+
+class Solution(object):
+    def removeDuplicates(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        l = 1
+        r = 1
+        
+        for r in range(1,len(nums)):
+            if nums[r] != nums[r-1]:
+                nums[l] = nums[r]
+                l+=1
+            
+        return l

@@ -16,11 +16,11 @@ def findCeil(root, x):
         if root.data == x:
             return root.data
         
-        if x > root.data:
-            root = root.right
-        else:
+        if root.data > x:
             ceil = root.data
             root = root.left
-     
+        else:
+            root = root.right
+
     return ceil
             

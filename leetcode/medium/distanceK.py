@@ -9,7 +9,13 @@
 # we do this so that we can go to the opposite tree of the current node
 # starting at the target node, identify do a dfs
 # keep track of the visited nodes and find the nodes at distance K
-# from the target node
+# from the target node  
+
+# this can also be solved using a bfs
+# starting at the target node 
+# keep track of the node and the distance of
+# the node from the target node in a tuple 
+
 
 class Solution:
     def distanceK(self, root: TreeNode, target: TreeNode, k: int) -> List[int]:

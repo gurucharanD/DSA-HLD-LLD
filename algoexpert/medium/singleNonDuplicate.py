@@ -16,6 +16,15 @@ class Solution:
             
             if mid & 1:
                 mid -= 1
+
+            # if mid lands at an odd index
+            # we move mid to backward by 1 index
+            # by doing a mid-1
+            # we do this because the non duplicate number 
+            # can only lie in the even index
+            # and also the numbers that are before our mid have to be
+            # duplicate elements since the number of elements before mid is even
+            # 
             
             if nums[mid] == nums[mid+1]:
                 low = mid+2

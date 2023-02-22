@@ -35,8 +35,7 @@ def changeTree(root):
         right = node.right.data if node.right else 0
         
         total = left+right
-        if node.left or node.right:
-            node.data = total
+        node.data = total
     helper(root)
     return root
             

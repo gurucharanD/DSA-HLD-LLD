@@ -15,7 +15,10 @@ class Solution:
             
             if index == len(stones)-1:
                 return True
-                                    
+            
+            # checking if there is a stones 
+            # at the position of stones[index]+k
+            
             if stones[index]+k in stonesCache:
                 index = stonesCache[stones[index]+k]
                 

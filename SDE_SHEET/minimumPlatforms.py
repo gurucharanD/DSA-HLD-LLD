@@ -16,7 +16,9 @@ count = 1
 n = len(arr)
 
 while i < n and j < n:
-    
+    # we have another train arriving at the platform
+    # before the first train is leaving
+    # hence we increment the count of platforms
     if arr[i] <= dep[j]:
         count+=1
         i+=1

@@ -12,6 +12,21 @@
 # time: O(2^N * N) = deep copy takes a N time
 # space: O(2^N * K) = you create 2 pow N subsets and each has a size of avg size of K
 # N is the max, 0 is the min
+
+# explanation for condition in line no : 44
+# consider the array [1,2,2]
+# the elements at index 1 and index 2 are eqaul
+# if i consider the element at index 2
+# then a duplicate subset [1,2] will be created with 
+# index [0,1] and [0,2] this happens because 
+# the element at index 1 has already created a subset and
+# using the same element again will create a duplicate subset
+# to avoid this situation only consider the first occurence
+# of the duplicate elements to add into your subsets
+# and ignore the remaining occurences
+# for better understanding check out the recursion tree 
+#  https://leetcode.com/problems/subsets-ii/solution/
+
 class Solution(object):
     def subsetsWithDup(self, nums):
         """

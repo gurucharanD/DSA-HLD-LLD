@@ -7,34 +7,33 @@
 class Solution:
     def zigzagLevelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
         
-        if root is None:
+        if not root:
             return []
         
         q = [root]
-        levelOrder = []
-        swap = True
-        
-        while len(q):
-            level = []            
-            for _ in range(len(q)):
+        ans = []
+        zigzag = False
+        while q:
+            
+            length = len(q)
+            level = [0]*length
+            for i in range(length):
                 node = q.pop(0)
-                if node is not None:
-                    level.append(node.val)
-                     
-                    if node.left is not None:
+                if node:
+                    index = length-i-1 if zigzag else i
+                    level[index] = node.val
+                    
+                    if node.left:
                         q.append(node.left)
-                    if node.right is not None:
+                    if node.right:
                         q.append(node.right)
-                        
-            if swap == True:
-                levelOrder.append(level)
-            else:
-                levelOrder.append(level[::-1])
             
-            swap = not swap
 
+            ans.append(level)
+            zigzag = not zigzag
+        
+        return ans
                 
-        return levelOrder
-            
-                           
+                
+                
         

@@ -5,6 +5,15 @@
 # if target is greater thatn the current position move to next row
 # eliminating all the elements in the current row
 
+# at any point, 
+# the elements that are greater than
+# the current element are towards the 
+# right and down of the current element
+# the elements that are smaller than
+# the current element are towards the
+# left and up of the current element
+
+
 # space is O(1) - no extra space
 # time is O(N+M) 
 # N - no of rows
