@@ -1,5 +1,0 @@
-console.log('start')
-setTimeout(()=>{console.log('timeout 1')},0)
-setImmediate(()=>{console.log('setImmediate')})
-process.nextTick(()=>{console.log('next tick')})
-console.log('end')
