@@ -8,7 +8,6 @@ class Solution:
     def compress(self, chars: List[str]) -> int:
         
         left = 0
-        right = 1
         currentChar = chars[0]
         count = 1
         

@@ -1,16 +1,56 @@
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
+                
+        n = len(coins)
         
-        dp = [ float("inf") for _ in range(amount+1)]
-        dp[0] = 0
+        dp = [[float("inf")]*(amount+1) for _ in range(n)]
         
-        for i in range(1,amount+1):
-            for coin in coins:
-                if coin <= i:
-                    dp[i] = min( dp[i], 1+dp[i-coin] )
+        for tar in range(amount+1):
+            if tar % coins[0] == 0:
+                dp[0][tar] = tar // coins[0]
         
-        return dp[len(dp)-1] if dp[len(dp)-1] != float("inf") else -1
+        for idx in range(1,n):
+            for tar in range(0,amount+1):
+                ans = dp[idx-1][tar]
+                if coins[idx] <= tar:
+                    ans = min(ans,1+dp[idx][tar-coins[idx]])
 
+                dp[idx][tar] = ans
+        
+        
+        sol = dp[n-1][amount]
+        if sol == float("inf"):
+            return -1
+        
+        return sol
+
+
+class Solution:
+    def coinChange(self, coins: List[int], amount: int) -> int:
+                
+        n = len(coins)
+        
+        prev = curr = [float("inf")]*(amount+1)
+        
+        for tar in range(amount+1):
+            if tar % coins[0] == 0:
+                prev[tar] = tar // coins[0]
+        
+        for idx in range(1,n):
+            for tar in range(0,amount+1):
+                ans = prev[tar]
+                if coins[idx] <= tar:
+                    ans = min(ans,1+curr[tar-coins[idx]])
+
+                curr[tar] = ans
+        
+        
+        sol = prev[amount]
+        if sol == float("inf"):
+            return -1
+        
+        return sol
+                
 # in the base case, you cant return 0 because since we are 
 # considering the minimum number of coins if you return a 0
 # 0 will always be considered as the minimum coins
