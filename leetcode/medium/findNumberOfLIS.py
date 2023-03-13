@@ -5,7 +5,6 @@ class Solution:
         count = [1 for _ in nums]
         maxi = 1
         for i in range(len(nums)):
-            prevCount  = 1
             for j in range(0,i):
                 if nums[i] > nums[j] and dp1[j] + 1 > dp1[i]:
                         dp1[i] = dp1[j]+1

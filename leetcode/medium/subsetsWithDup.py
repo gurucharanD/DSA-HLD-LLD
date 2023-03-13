@@ -52,4 +52,19 @@ class Solution(object):
         
         return solution
         
+from bisect import bisect_left
+class Solution:
+    def lengthOfLIS(self, nums: List[int]) -> int:
+        
+        temp = []
+        
+        for num in nums:
+            
+            i = bisect_left(temp,num)
+            if i == len(temp):
+                temp.append(num)
+            else:
+                temp[i] = num
+        
+        return len(temp)
         
