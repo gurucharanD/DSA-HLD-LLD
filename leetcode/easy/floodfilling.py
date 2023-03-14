@@ -9,6 +9,9 @@
 # if the child is already visited the color will be already changed from
 # original color to new color
 
+# we dont have to color a cell that doesnt have the original color
+#  we only have to fill the cells that are connected to the given sr and sc
+# in all four directions and having color as the image[sr][sc]
 
 class Solution:
     def floodFill(self, image: List[List[int]], sr: int, sc: int, newColor: int) -> List[List[int]]:
