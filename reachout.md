@@ -41,4 +41,4 @@ Thank you.
 
 __________________________________
 
-Hi {}, I'm a grad student in CS @ CSU Long Beach.I'm about to graduate this summer and currently looking out for SWE/SDE roles.I posses close to 4 years of professional experience in full stack development in Node, react, Javascript.Looking forward to connecting with you for any potential roles.
+Hi {}, I'm a grad student in CS @ CSU Long Beach.I'm about to graduate this summer and currently looking out for SWE/SDE roles.I posses close to 4 years of professional experience in full stack development in Node, react, Typescript, Javascript.Looking forward to connecting with you for any potential roles.
