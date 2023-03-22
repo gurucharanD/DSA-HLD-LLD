@@ -1,7 +1,5 @@
 #User function Template for python3
 # Shortest path in Undirected Graph having unit distance
-
-
 from collections import deque
 class Solution:
     def shortestPath(self, edges, n, m, src):

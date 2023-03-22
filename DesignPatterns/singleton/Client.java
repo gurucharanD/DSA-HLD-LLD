@@ -3,15 +3,15 @@ package DesignPatterns.singleton;
 public class Client {
 
     public static void method1() {
-        Logger logger = Logger.getLoggerInstance();
-        logger.print("hello");
-        logger.print("hows it going");
+        PaymentManager payment = PaymentManager.getInstance();
+        payment.process("john", "mike", 1000);
     }
 
     public static void method2() {
-        Logger logger = Logger.getLoggerInstance();
-        logger.print("hello");
-        logger.print("hows it going");
+        PaymentManager payment = PaymentManager.getInstance();
+        payment.process("guru", "charan", 100);
+        payment.listPayments();
+
     }
 
     public static void main(String[] args) {
@@ -26,7 +26,7 @@ public class Client {
         Thread t2 = new Thread(new Runnable() {
             @Override
             public void run() {
-                method1();
+                method2();
             }
         });
         t2.run();

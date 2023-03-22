@@ -1,16 +1,18 @@
 package DesignPatterns.Builder;
 
+import java.util.List;
+
 public class Director {
-    private AbstractBuilder desktopBuilder;
+    private AbstractBuilder restaurantBuilder;
 
     Director(AbstractBuilder builder) {
-        this.desktopBuilder = builder;
+        this.restaurantBuilder = builder;
     }
 
-    public Product buildProduct() {
-        this.desktopBuilder.buildName();
-        this.desktopBuilder.buildKeyboard();
-        this.desktopBuilder.buildMouse();
-        return this.desktopBuilder.getProduct();
+    public Restaurant buildRestaurant(List<String> items, String owner, String name) {
+        this.restaurantBuilder.buildMenu(items);
+        this.restaurantBuilder.buildName(name);
+        this.restaurantBuilder.buildOwner(owner);
+        return this.restaurantBuilder.getRestaurant();
     }
 }

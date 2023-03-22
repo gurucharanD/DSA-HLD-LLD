@@ -1,36 +1,20 @@
 package DesignPatterns.Builder;
 
+import java.util.List;
+
 abstract class AbstractBuilder {
-    protected Product product;
-
-    // whenever a new builder is created,
-    // a new product is created along with it
-    // hence we create a product object everytime
-    // the builder object is created
-    // the object is marked protected as it
-    // should be accessible to its child classes
-
+    protected Restaurant restaurant;
     AbstractBuilder() {
-        this.product = new Product();
+        this.restaurant = new Restaurant();
     }
 
-    abstract void buildName();
-    // {
-    // this.product.buildName(name);
-    // }
+    abstract void buildName(String name);
 
-    abstract void buildKeyboard();
-    // {
-    // this.product.buildKeyboard(keyboard);
-    // }
+    abstract void buildMenu(List<String> items);
 
-    abstract void buildMouse();
+    abstract void buildOwner(String name);
 
-    public Product getProduct() {
-        return this.product;
+    public Restaurant getRestaurant() {
+        return this.restaurant;
     }
-    // {
-    // this.product.buildMouse(mouse);
-    // }
-
 }

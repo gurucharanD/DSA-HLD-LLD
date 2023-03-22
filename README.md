@@ -1,3 +1,5 @@
-# algoexpert
+Find a compelling application of Singleton design pattern for the food delivery system defined in assignment1 and draw its corresponding class diagram and a collaboration diagram and Implement it in either Java or Python. Explain why singleton should be applied in that scenario (30 points). 
 
-algoexpert solutions 
+Find a compelling scenario where you can apply Joshua Bloch’s builder design pattern to the food delivery system.  Draw the corresponding class diagram and sequence diagram and implement it in Java or Python (35 points)
+
+Find a compelling scenario where you can apply either the Abstract Factory design, or factory method, or prototype, or GoF builder pattern to the food delivery system (pick one).  Draw the corresponding class diagram and sequence diagram and implement in either Java or Python  (35 points)
