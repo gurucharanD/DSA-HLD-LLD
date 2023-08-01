@@ -2,20 +2,20 @@ package DesignPatterns.Observer;
 
 public class Client {
     public static void main(String[] args) {
-        Publisher pub = new Publisher();
+        Order order = new Order();
 
-        Subscriber user1 = new User1(1);
-        Subscriber user2 = new User1(2);
-        Subscriber user3 = new User1(3);
+      DeliveryDriver deliveryPerson = new DeliveryDriver("guru");
+      Customer customer = new Customer("charan");
 
-        pub.subscribe(user1);
-        pub.subscribe(user2);
-        pub.subscribe(user3);
+    order.registerObserver(deliveryPerson);
+    order.registerObserver(customer);
 
-        pub.notify("this is message 1");
+    order.setStatus("Preparing");
+    order.setStatus("Packaging");
+    order.setStatus("Out for delivery");
+    order.setStatus("Delivered");
 
-        pub.unsubscribe(user2);
-        pub.notify("this is message 2");
-
-    }
+    order.removeObserver(deliveryPerson);
+    order.setStatus("Cancelled");
+}
 }

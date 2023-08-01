@@ -5,6 +5,9 @@ class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
         
 #         bucket sort
+#         each index is going to store a bucket, 
+#         each index i, stores an array of elements that occur i times
+
 #         buckets = [[] for _ in range(len(nums)+1)]
 #         counter = Counter(nums)
         
