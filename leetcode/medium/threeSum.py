@@ -33,6 +33,7 @@ class Solution(object):
                     low += 1
                     # moving the low pointer to the place which
                     # which is a number that is not duplicated
+                   
                     while low < high and nums[low] == nums[low-1]:
                         low += 1
         

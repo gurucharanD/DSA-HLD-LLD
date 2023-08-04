@@ -14,7 +14,8 @@ class Solution:
 
         return [left_product[i]*right_product[i] for i in range(n)]
 
-            
+
+# save extra space usage, by calculating the right product of the array on the sum
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
         

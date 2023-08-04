@@ -1,5 +1,39 @@
 # O(n) time and sapce
 
+class Solution(object):
+    def trap(self, height):
+        """
+        :type height: List[int]
+        :rtype: int
+        """
+
+        n = len(height)
+        left_max = [0]*n
+        right_max = [0]*n
+
+        maxThusFar = 0
+        for i in range(1,n):
+            left_max[i] = max(height[i-1],maxThusFar)
+            maxThusFar = left_max[i]
+        
+        maxThusFar = 0
+        for i in range(n-2,-1,-1):
+            right_max[i] = max(height[i+1],maxThusFar)
+            maxThusFar = right_max[i]
+        
+        ans = 0
+        for i in range(n):
+
+            curr_hei = height[i]
+            min_hei = min(left_max[i],right_max[i])
+
+            if min_hei > curr_hei:
+                ans += (min_hei-curr_hei)
+        
+        return ans
+            
+        
+
 def waterArea(buildings):
     # Write your code here.
 	leftTallestPillarHeights = [0 for _ in buildings]

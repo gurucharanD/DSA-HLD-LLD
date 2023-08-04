@@ -1,7 +1,9 @@
 # permuatation is arraning the elements in the input array in different order
 # [[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]] for [1,2,3]
-# you can have any element in the given array as the first element in the array
+
+# you need to have every element in the given array as the first element in the array
 # hence you loop through the array and keep a track of which element has been added to the subset
+
 # if the element at the current index in loop is not added to the subset
 # you add that element to the subset and when the length of the subset is equal to the length of
 # the input array we have generated a valid permuatation and you add that permuatation to the solution
@@ -35,4 +37,11 @@ class Solution:
         helper([],track)
         return sol
 
+# Time complexity, what you should say in an interview: O(n⋅n!)
 
+# Finding permutations is a well-studied problem in combinatorics. 
+# Given a set of length n, the number of permutations is n!n!n! (n factorial).
+# There are nnn options for the first number, n−1n - 1n−1 for the second, and so on.
+
+# For each of the n! permutations, we need O(n) work to copy curr into the answer.
+# This gives us O(n⋅n!)

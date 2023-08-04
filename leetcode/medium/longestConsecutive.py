@@ -2,6 +2,7 @@
 
 # create a hashmap of the elements in the array as keys and each key has value as False
 # this hashmap is used to avoid double counting the elements
+
 # for every element compute the left and right numbers of it in the numeric order
 # left is 1 smaller the current element and right is 1 greater than the current element
 # keep going to the left as long as you keep finding the smaller numbers having difference 1, mark the elements that you have used as TRUE
@@ -18,9 +19,9 @@ class Solution(object):
         if len(array) == 0:
             return 0
         
-        bestRange = []
         longestLength = 0
         nums = {}
+
         for num in array:
             nums[num] = True
 
@@ -46,6 +47,5 @@ class Solution(object):
 
             if currentLength > longestLength:
                 longestLength = currentLength
-                bestRange = [left+1,right-1]
 
-        return bestRange[1]-bestRange[0]+1
+        return longestLength
