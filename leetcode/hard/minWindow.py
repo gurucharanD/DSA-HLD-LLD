@@ -1,54 +1,51 @@
+# maintain two counts required and available
+# required shows the number of unique characters needed
+# available shows the count of unique characaters found in the current window
+# if required == available in a window, then we have found a possible answer
+
+# the value of available is incremented when we add a character into our window which is 
+# avaialable in t and the count of it in the window and the counter is equal
+
+# once the condition is meet, we need to compare it with the answer we already have
+# to find the best answer 
+
+# keep incrementing the window until, the condition available == required is not satisfied
+# once the condition is satisfied shrink the window by moving the left pointer to its right by 1
+# if the character pointed by l is in t and window[s[l]]<t_counter[s[l]], the we have an invalid window
+# then we need to decrease the available by 1
+
+
+
+
 class Solution:
     def minWindow(self, s: str, t: str) -> str:
+
         
-        i = 0
-        j = -1
-        
+        window = defaultdict(int)
         t_counter = Counter(t)
-        s_counter = defaultdict(int)
-
-        required = len(t_counter)
-        available = 0
+        l = 0
+        req = len(t_counter)
+        avail = 0
+        ans = float("infinity")
+        res = [-1,-1]
         
-        answer = ''
-        
-        while i < len(s):
-            #inrement the window
-            if available < required:
-                
-                if j == len(s)-1:
-                    return answer
-                
-                j+=1
-    
-                s_counter[s[j]] += 1
-                if t_counter[s[j]] and t_counter[s[j]] == s_counter[s[j]]:
-                    available += 1
-                    
+      
 
-
-            #decrement the window such that the count of s[i] in in s_counter
-            #should be less than the count of s[i] in t_counter
-            #if the count of s[i] in s_count is already less in t_count
-            #dont ado anything            
-            else:
-                
-                s_counter[s[i]] -= 1
-                if t_counter[s[i]] and s_counter[s[i]] < t_counter[s[i]]:
-                    available -= 1
-                
-                i+=1
+        for r in range(len(s)):
+            c = s[r]
+            window[c]+=1
+            if c in t_counter and t_counter[c] == window[c]:
+                avail+=1
             
-            if required == available:
+            while avail == req:
+                if ans > (r-l)+1:
+                    ans = (r-l)+1
+                    res = [l,r]
                 
-                if not answer:
-                    answer = s[i:j+1]
-                elif (j-i+1) < len(answer):
-                    answer = s[i:j+1]
-                
-
-        return answer
-                
-                
-        
-        
+                window[s[l]]-=1
+                if s[l] in t_counter and window[s[l]] < t_counter[s[l]]:
+                    avail-=1
+                l+=1
+        print(res)
+        l,r = res
+        return s[l:r+1] if ans!=float("infinity") else ""

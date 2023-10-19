@@ -17,9 +17,16 @@ class Solution:
             if opening > 0 :
                 s+='('
                 helper(s,opening-1,closing,solution)
+                # backtrack step remove the last added
+                # parenthesis and go to next branch
                 s = s[:-1]
             
             if closing > 0: 
+                # this condition is inplce to prevent us
+                # from starting a new combination with
+                # a closing ), if we start with a open (
+                # the count of closing is always greater
+                # than the opening
                 if opening < closing:
                     s+=')'
                     helper(s,opening,closing-1,solution)
