@@ -57,7 +57,6 @@ class Solution:
             pointer1 = pointer1.next
             count+=1
         
-        
         while pointer1:
             pointer1 = pointer1.next
             pointer2 = pointer2.next

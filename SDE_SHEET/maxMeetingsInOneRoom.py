@@ -1,6 +1,10 @@
 # start = [1,3,0,5,8,5]
 # end = [2,4,6,7,9,9]
 
+# to maximise the number of meetings that could be perfomed
+# in a single room, we can choose the meetings that end soon
+# and perfrom them first 
+
 start = [10, 12, 20]
 end = [20, 25, 30]
 

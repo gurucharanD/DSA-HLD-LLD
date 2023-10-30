@@ -9,7 +9,6 @@
 class Solution:
     def reverseKGroup(self, head: Optional[ListNode], k: int) -> Optional[ListNode]:
         
-        
         def helper(prevNode,currNode,count):
             if currNode is None:
                 return None
@@ -32,7 +31,6 @@ class Solution:
                     k -= 1
 
                 root.next = helper(None,currNode,count)
-
                 return prevNode
             else:
                 return currNode

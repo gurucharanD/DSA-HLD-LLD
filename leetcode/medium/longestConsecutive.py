@@ -29,7 +29,7 @@ class Solution(object):
 
             if not nums[num]:
                 continue
-
+                
             nums[num] = False
             currentLength = 1
             left = num-1

@@ -28,7 +28,7 @@ class Solution(object):
             while s[right] in hashSet:
                 hashSet.remove(s[left])
                 left+=1
-                
+                    
             maxLength = max(maxLength,right-left+1)
             hashSet.add(s[right])
             

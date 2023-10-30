@@ -1,5 +1,8 @@
 # start looping from backwards,
 # you will find an increasing sequence in the numbers
+# [2,1,5,4,3,0,0]
+# this loop breaks at 1, since it is at index 1
+# our index1 becomes 1
 
 # stop and note the index where the increasing sequence breaks
 # and make a note of this index call it index1
@@ -10,11 +13,13 @@
 
 # start looping from backwards again and 
 # find the index where the element is greater than the element at index1
+# in our example this is 3 and it is at index 4
 # and call this index as index2
 # after you find these elements swap elements at index1 and index2
+# example becomes [2,3,5,4,1,0,0]
 
 # after swapping these elements, reverse the elements from index1+1 to the last
-
+# [2,3,0,0,1,4,5]
 # Time : O(N)
 
 class Solution:

@@ -1,5 +1,9 @@
 # 229. Majority Element II
 
+# there can be only two numbers in the array of size n
+# with count greater than n/3
+
+
 class Solution:
     def majorityElement(self, nums: List[int]) -> List[int]:
         nums1 = None

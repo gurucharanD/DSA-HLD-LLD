@@ -16,8 +16,7 @@ class Solution:
                 lastInterval[end] = max(lastInterval[end],currentInterval[end])
             else:
                 merged.append(currentInterval)
-                
-            
+        
         return merged
             
             
